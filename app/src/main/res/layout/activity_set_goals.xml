@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.SetGoals"
+    android:background="@color/screen_bg">
+
+    <RelativeLayout
+        android:id="@+id/app_header"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/back_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/back_icon"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Set Goals"
+            android:layout_toEndOf="@id/back_icon"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="12dp"
+            android:textSize="22sp"
+            android:textColor="@color/black"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:layout_centerInParent="true"/>
+    </RelativeLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/firstGoalLayout"
+        style="@style/my_text_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/gradient_2"
+        app:counterMaxLength="100"
+        app:hintEnabled="false"
+        app:layout_constraintEnd_toStartOf="@+id/app_header"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/app_header">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etFirstGoal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Write about your first goal"
+            android:paddingTop="4dp"
+            android:paddingBottom="30dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/white"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/secondGoalLayout"
+        style="@style/my_text_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/gradient_4"
+        app:counterMaxLength="100"
+        app:hintEnabled="false"
+        app:layout_constraintEnd_toStartOf="@+id/firstGoalLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/firstGoalLayout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etSecondGoal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Write about your second goal"
+            android:paddingTop="4dp"
+            android:paddingBottom="30dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/white"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/thirdGoalLayout"
+        style="@style/my_text_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/gradient_3"
+        app:counterMaxLength="100"
+        app:hintEnabled="false"
+        app:layout_constraintEnd_toStartOf="@+id/secondGoalLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/secondGoalLayout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etThirdGoal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Write about your third goal"
+            android:paddingTop="4dp"
+            android:paddingBottom="30dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/white"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/reminderTiming"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:text="Set reminder time"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.142"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/thirdGoalLayout" />
+    
+    <TimePicker
+        android:id="@+id/setTime"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:timePickerMode="spinner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.142"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/reminderTiming"/>
+
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        app:backgroundTint="@color/dark_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/setTime" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

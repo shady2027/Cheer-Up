@@ -1,0 +1,15 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.CheerUp" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your dark theme here. -->
+        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+        <item name="colorPrimary">@color/screen_bg</item>
+        <item name="colorPrimaryVariant">@color/screen_bg</item>
+        <item name="colorOnPrimary">@color/screen_bg</item>
+        <item name="colorSecondary">@color/button_bg</item>
+        <item name="colorSecondaryVariant">@color/button_bg</item>
+        <item name="colorOnSecondary">@color/button_bg</item>
+        <item name="android:statusBarColor">@color/screen_bg</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+</resources>
